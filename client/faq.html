@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!-- Web App Config -->
+    <title>File Beam FAQ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#3367d6">
+    <meta name="color-scheme" content="dark light">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="apple-mobile-web-app-title" content="File Beam">
+    <!-- Descriptions -->
+    <meta name="description" content="Instantly share images, videos, PDFs, and links with people nearby. No Setup, No Signup.">
+    <meta name="keywords" content="File, Transfer, Share, Peer2Peer">
+    <meta name="author" content="ZaneWesley">
+    <!-- Icons -->
+    <link rel="icon" sizes="96x96" href="images/favicon-96x96.png">
+    <link rel="shortcut icon" href="images/favicon-96x96.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <meta name="msapplication-TileImage" content="images/mstile-150x150.png">
+    <link rel="fluid-icon" type="image/png" href="images/android-chrome-192x192.png">
+    <!-- Resources -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body translate="no">
+    <header class="row-reverse">
+        <a href="/" class="icon-button" title="Go to File Beam">
+            <svg class="icon">
+                <use xlink:href="#home" />
+            </svg>
+        </a>
+        <a href="#" id="theme" class="icon-button" title="Switch Dark Mode/Light Mode">
+            <svg class="icon">
+                <use xlink:href="#icon-theme" />
+            </svg>
+        </a>
+    </header>
+    <h1>Frequently Asked Questions</h1>
+
+    <h3>What about the connection? Is it a P2P-connection directly from device to device or is there any third-party-server?</h3>
+    <h3 class="ans">It uses a P2P connection if WebRTC is supported by the browser. WebRTC needs a Signaling Server, but it is only used to establish a connection and is not involved in the file transfer.</h3>
+
+    <h3>What about privacy? Will files be saved on third-party-servers?</h3>
+    <h3 class="ans">None of your files are ever sent to any server. Files are sent only between peers. File Beam doesn't even use a database. If you are curious have a look <a href="">at the Server</a>. Even if File Beam was able to view the files being transfered, WebRTC encrypts the files on transit, so the server would be unable to read them.</h3>
+
+    <h3>What about security? Are my files encrypted while being sent between the computers?</h3>
+    <h3 class="ans">Yes. Your files are sent using WebRTC, which encrypts them on transit.</h3>
+
+    <style>
+        h3 {
+            width: 80%;
+            text-align: center;
+        }
+        h1, a:not(.icon-button) {
+            color: var(--primary-color);
+        }
+        .ans {
+            font-weight: 400;
+        }
+    </style>
+
+    <!-- SVG Icon Library -->
+    <svg style="display: none;">
+        <symbol id="home" viewBox="0 0 576 512">
+            <path d="M570.69 236.28L512 184.45V48a16 16 0 0 0-16-16h-64a16 16 0 0 0-16 16v51.69L314.75 10.31a39.85 39.85 0 0 0-53.45 0l-256 226a16 16 0 0 0-1.21 22.6L25.5 282.7a16 16 0 0 0 22.6 1.21L277.42 81.63a16 16 0 0 1 21.17 0L527.91 283.9a16 16 0 0 0 22.6-1.21l21.4-23.82a16 16 0 0 0-1.22-22.59zM288 115L69.47 307.71c-1.62 1.46-3.69 2.14-5.47 3.35V496a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16V368a16 16 0 0 1 16-16h96a16 16 0 0 1 16 16v128a16 16 0 0 0 16 16h128a16 16 0 0 0 16-16V311.1c-1.7-1.16-3.72-1.82-5.26-3.2z" />
+        </symbol>
+        <symbol id="icon-theme" viewBox="0 0 24 24">
+         <rect fill="none" height="24" width="24"/><path d="M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36c-0.98,1.37-2.58,2.26-4.4,2.26 c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/>
+        </symbol>
+    </svg>
+
+    <script src="scripts/theme.js" async></script>
+</body>
+</html>
